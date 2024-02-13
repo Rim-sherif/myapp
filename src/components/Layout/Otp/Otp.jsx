@@ -15,7 +15,7 @@ export default function Otp() {
             <img className="img1"  src={img} alt=""></img>
             <h2>OTP Verification</h2>
             <p className="py-3">
-              We have you sent you access code via SMS for Mobile
+              We have sent you access code via SMS for Mobile
               Verification.
             </p>
             <div className="otp-number d-flex justify-content-center gx-2">

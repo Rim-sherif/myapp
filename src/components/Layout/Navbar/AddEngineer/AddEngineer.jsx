@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AddEngineer() {
   return (
@@ -8,7 +9,8 @@ export default function AddEngineer() {
         <div className="add-engineer bg-white  shadow m-auto py-5">
           <div className="d-flex justify-content-between px-4">
             <h3 className=" ">Add Engineer</h3>
-          <i className="fa-solid fa-xmark "></i>
+            <Link to="Requests">
+          <i className="fa-solid fa-xmark "></i></Link>
           </div>
           
             <div className="row g-3 px-3 add-form">
@@ -38,6 +40,14 @@ export default function AddEngineer() {
               </div>
               <div className="col-12 py-2">
                 <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Password"
+                  aria-label="Last name"
+                />
+              </div>
+              <div className="col-12 py-2">
+                <input
                   type="number"
                   className="form-control"
                   placeholder="Phone"
@@ -58,12 +68,7 @@ export default function AddEngineer() {
                 </label>
                 <input className="form-control w-100" type="file" id="formFile" />
               </div>
-              <div className="col-12 py-2">
-                <label for="formFile" className="form-label text-muted px-2"
-                  >ID:
-                </label>
-                <input className="form-control w-100" type="file" id="formFile" />
-              </div>
+             
 
               <div className="text-center">
                 <div className="d-grid gap-2 d-md-block p-3">

@@ -1,79 +1,346 @@
-import React from 'react';
-import img from '../../../../assets/images/images/Rectangle 62.jpg';
-
-
+import React from "react";
+import { Link } from "react-router-dom";
+// import img from '../../../../assets/images/images/Rectangle 62.jpg';
 
 export default function Profile() {
   return (
     <div>
-      <div className="admin-profile  ">
-      <div className="container p-4 mt-5  w-75  bg-white">
-        <h2 className="brdr">Account information</h2>
-        <div className="d-flex py-5 row">
-          <div className="profile-img col-lg-4 col-md-12">
-            <img
-              style={{width: "75%"}}
-              src={img}
-              alt=""
-            />
-          </div> 
-           
-              <div className="col-lg-4 col-md-12 profile-info ">
-                <p><span>Name: </span> Rdam smith</p>
-                <p><span> Age: </span> 26 Year</p>
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="gender"
-                  id="gender"
-                  checked
-                />
-                <label className="form-check-label" for="gender"> Male</label>
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="gender"
-                  id="gender"
-                  
-                />
-                <label className="form-check-label" for="gender"> Female </label>
+      <div className="admin-profile ">
+        <div className="container p-5   w-75  bg-white  ">
+          <div className="row" id="user-profile">
+            <div className="col-lg-3 col-md-4 col-sm-4 h-100vh">
+              <div className="main-box ">
+                <h2>John Doe </h2>
+                <div className="profile-status">
+                  <i className="fa fa-check-circle"></i> Online
+                </div>
+                <div className="flex-shrink-0">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                    alt=""
+                    className="img-fluid"
+                    style={{ width: "180px", borderRadius: "10px" }}
+                  />
+                </div>
+                <div className="profile-label">
+                  <span className="label label-danger">Admin</span>
+                </div>
+
+                <div className="profile-stars">
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star-o"></i>
+                  <span>Super User</span>
+                </div>
+
+                <div className="profile-since">Member since: Jan 2012</div>
+
+                <div className="profile-details">
+                  <ul className="fa-ul">
+                    <li>
+                      <i className="fa-li fa fa-truck"></i>Orders:{" "}
+                      <span>456</span>
+                    </li>
+                    <li>
+                      <i className="fa-li fa fa-comment"></i>Posts:{" "}
+                      <span>828</span>
+                    </li>
+                    <li>
+                      <i className="fa-li fa fa-tasks"></i>Tasks done:{" "}
+                      <span>1024</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="profile-message-btn center-block text-center">
+                  <Link href="#" className="btn btn-success">
+                    <i className="fa fa-envelope"></i> Send message
+                  </Link>
+                </div>
               </div>
-              <div className=" col-lg-4 col-md-12 profile-info">
-                <p><span>E-mail: </span>example@gmail.com</p>
-                <p><span>Phone: </span>+20 104579473</p>
-                <p><span>Role: </span>Adminstrator</p>
+            </div>
+
+            <div className="col-lg-9 col-md-8   col-sm-4">
+              <div className="main-box clearfix">
+                <div className="profile-header">
+                  <h3>
+                    <span>User info</span>
+                  </h3>
+                  <Link href="#" className="btn btn-primary edit-profile">
+                    <i className="fa fa-pencil-square fa-lg"></i> Edit profile
+                  </Link>
+                </div>
+
+                <div className="row profile-user-info">
+                  <div className="col-sm-8">
+                    <div className="profile-user-details clearfix">
+                      <div className="profile-user-details-label">Name</div>
+                      <div className="profile-user-details-value">John Doe</div>
+                    </div>
+
+                    <div className="profile-user-details clearfix">
+                      <div className="profile-user-details-label">Email</div>
+                      <div className="profile-user-details-value">
+                        johndoe@bootdey.com
+                      </div>
+                    </div>
+                    <div className="profile-user-details clearfix">
+                      <div className="profile-user-details-label">
+                        PhoneNumber
+                      </div>
+                      <div className="profile-user-details-value">
+                        011 223 344 556 677
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-4 profile-social">
+                    <ul className="fa-ul">
+                      <li>
+                        <i className="fa-li fab fa-twitter-square "></i>
+                        <Link className="a" href="#">
+                          @scjohansson
+                        </Link>
+                      </li>
+                      <li>
+                        <i className="fa-li fab fa-linkedin"></i>
+                        <Link className="a" href="#">
+                          John Doe
+                        </Link>
+                      </li>
+                      <li>
+                        <i className="fa-li fab fa-facebook-square"></i>
+                        <Link className="a" href="#">
+                          John Doe
+                        </Link>
+                      </li>
+                      <li>
+                        <i className="fa-li fab fa-skype"></i>
+                        <Link className="a" href="#">
+                          Black_widow
+                        </Link>
+                      </li>
+                      <li>
+                        <i className="fa-li fab fa-instagram"></i>
+                        <Link className="a" href="#">
+                          Avenger_Scarlett
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="table-responsive">
+                  <table className="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>User Profile</th>
+                        <th>User Name</th>
+                        <th>SignUP</th>
+                        <th>Posts</th>
+                        <th>Order Detail</th>
+                      </tr>
+                    </thead>
+                    <tbody id="myTable">
+                      <tr className="table-row">
+                        <td>1</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
+                            className="rounded-circle "
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Romani capl</td>
+                        <td>15/3/2023</td>
+                        <td>10</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                            className="rounded-circle shadow-4"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>David Androw</td>
+                        <td>30/2/2024</td>
+                        <td>4</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr className="success">
+                        <td>5</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            className="rounded-circle"
+                            style={{ width: "40px" }}
+                            alt="Avatar"
+                          />
+                        </td>
+                        <td>Alex John</td>
+                        <td>2/2/2022</td>
+                        <td>15</td>
+                        <td>
+                          <button type="button" className="btn  info-btn">
+                            Info
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            
-            
-          
-          
-    
-        </div>
-        <div className="item  px-5 ">
-          <h2 className="brdr">Your Activiation</h2>
-          <div className="d-flex justify-content-between pt-3 ">
-            <p> you made updates to the user's information.</p>
-            <p>At 9 AM today</p>
-          </div>
-          <div className="d-flex justify-content-between ">
-            <p> you made updates to the user's information.</p>
-            <p>At 9 AM today</p>
-          </div>
-          <div className="d-flex justify-content-between ">
-            <p> you made updates to the user's information.</p>
-            <p>At 9 AM today</p>
-          </div>
-          <div className="d-flex justify-content-between ">
-            <p> you made updates to the user's information.</p>
-            <p>At 9 AM today</p>
-          </div>
-          <div className="d-flex justify-content-between mb-3 ">
-            <p> you made updates to the user's information.</p>
-            <p>At 9 AM today</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  )
+  );
 }

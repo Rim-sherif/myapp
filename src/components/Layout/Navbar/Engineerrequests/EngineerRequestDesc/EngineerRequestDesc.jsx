@@ -17,10 +17,7 @@ export default function EngineerRequestDesc() {
         <label for="formFile" className="form-label fw-bold px-2">ID: </label>
         <input className="form-control w-25" type="file" id="formFile" />
       </div>
-      <div className="d-flex pt-2">
-        <label for="formFile" className="form-label fw-bold px-2">ID: </label>
-        <input className="form-control w-25" type="file" id="formFile"  />
-      </div>
+     
      
 
       <div className="d-grid gap-2 d-md-block text-center mt-5">

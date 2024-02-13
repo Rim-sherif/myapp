@@ -14,8 +14,8 @@ export default function Engineerrequests() {
       <div className="container p-5 bg-white  ">
         <div className="d-flex justify-content-between ">
           <div className="d-flex">
-            <h3 className="fst-italic">Engineer request list</h3>
-            <i className="fa-solid fa-list list py-1 req-ico"></i>
+            <h3 className="fst h2">Requests</h3>
+        
           </div>
           <form className="w-25" role="search">
             <input
@@ -25,6 +25,13 @@ export default function Engineerrequests() {
               aria-label="Search"
             />
           </form>
+        </div>
+        <div className="d-flex justify-content-between ">
+          <div className="d-flex">
+            <h3 className="fst h3">Engineer request list</h3>
+            <i className="fa-solid fa-list list py-1 req-ico"></i>
+          </div>
+          
         </div>
         <div className="row mt-3 g-4">
           <div className="col-lg-2">

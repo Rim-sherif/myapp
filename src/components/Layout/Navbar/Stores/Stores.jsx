@@ -4,7 +4,7 @@ import imge from '../../../../assets/images/images/Rectangle 62.jpg';
 import im from '../../../../assets/images/images/Rectangle 63.jpg';
 import i from '../../../../assets/images/images/Rectangle 64.jpg';
 import imageee from '../../../../assets/images/images/Rectangle 65.jpg';
-import { Link } from 'react-router-dom';
+
 
 
 export default function Stores() {
@@ -15,11 +15,8 @@ export default function Stores() {
         <div className="main-sec">
           <div className="d-flex justify-content-between">
             <div className="d-flex">
-              <h2 className="fst-italic">StoresList</h2>
-              <Link className="dropdown-item" to="AddStore">
-              <button className="btn btn-req1 mx-4" type="button">
-                +Add Store
-              </button></Link>
+              <h2 className="fst">Stores List</h2>
+              
             </div>
 
             <form className="w-25" role="search">
@@ -33,7 +30,7 @@ export default function Stores() {
           </div>
           <div className="row">
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -51,9 +48,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -62,7 +59,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -80,9 +77,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -91,7 +88,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -109,9 +106,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -120,7 +117,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -138,9 +135,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -149,7 +146,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -167,9 +164,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -178,7 +175,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -196,9 +193,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -207,7 +204,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -225,9 +222,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -236,7 +233,7 @@ export default function Stores() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="store-item p-3 mt-5 ">
+              <div className="req-item shadow  p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -254,9 +251,9 @@ export default function Stores() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">

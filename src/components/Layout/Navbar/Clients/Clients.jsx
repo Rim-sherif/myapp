@@ -13,7 +13,7 @@ export default function Clients() {
         <div className="main-sec">
           <div className="d-flex justify-content-between">
             <div className="d-flex">
-              <h2 className="fst-italic">client List</h2>
+              <h2 className="fst h2">Client List</h2>
             </div>
 
             <form className="w-25" role="search">
@@ -25,9 +25,9 @@ export default function Clients() {
               />
             </form>
           </div>
-          <div className="row">
+          <div className="row ">
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -45,9 +45,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -56,7 +56,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -74,9 +74,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -85,7 +85,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -103,9 +103,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -114,7 +114,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -132,9 +132,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -143,7 +143,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -161,9 +161,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -172,7 +172,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -190,9 +190,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -201,7 +201,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -219,9 +219,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
@@ -230,7 +230,7 @@ export default function Clients() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="client-item p-3 mt-5 ">
+              <div className="req-item shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">
@@ -248,9 +248,9 @@ export default function Clients() {
                       >E-mail
                     </li>
                   </ul>
-                  <div className="edit">
-                    <i className="fa-solid fa-pen-to-square"></i>
-                    <i className="fa-solid fa-trash"></i>
+                  <div className="">
+                    <i className="fa-solid fa-pen-to-square  shadow edit"></i>
+                    <i className="fa-solid fa-trash warn shadow bg-white "></i>
                   </div>
                 </div>
                 <div className="text-center">
