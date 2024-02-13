@@ -362,7 +362,7 @@
   border-radius: 50%;
 }
 
-
+/*request page*/
 .io {
   cursor: pointer;
   padding: .5em;
@@ -375,6 +375,23 @@
   transition: transform .5s ease-out;
   color: rgb(22, 22, 215);
 
+}
+
+.border-start-primary {
+  border-left-color: #0061f2 !important;
+}
+.border-start-secondary {
+  border-left-color: #6900c7 !important;
+}
+
+.border-start-success {
+  border-left-color: #00ac69 !important;
+}
+.border-start-lg {
+  border-left-width: 0.25rem !important;
+}
+.h-100 {
+  height: 100% !important;
 }
 
 
@@ -423,7 +440,7 @@ h3>span {
     padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 150px;
+    width: 170px;
   }
 
   .profile-label {
@@ -723,3 +740,4 @@ h3>span {
     padding-left: calc(var(--nav-width) + 188px)
   }
 }
+

@@ -87,8 +87,6 @@ export default function Requests() {
               <div className="d-flex">
                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
               </div>
-
-          
             </div>
             <div className="row mt-3 g-5">
               <div className="col-lg-3 col-md-6">
@@ -99,7 +97,6 @@ export default function Requests() {
                         <div className="text-xs h5 font-weight-bold text-uppercase ">
                           Pending Requests
                         </div>
-                      
                       </div>
                       <div className="col-auto">
                         <i className="fas fa-comments fa-2x text-gray-300 io"></i>
@@ -114,12 +111,11 @@ export default function Requests() {
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
                         <div className="text-xs h5 font-weight-bold  text-uppercase mb-1">
-                        Generate Report
+                          Generate Report
                         </div>
-        
                       </div>
                       <div className="col-auto">
-                      <i className="fas fa-download fa-2x  io"></i>
+                        <i className="fas fa-download fa-2x  io"></i>
                       </div>
                     </div>
                   </div>
@@ -136,9 +132,7 @@ export default function Requests() {
                       </div>
                       <div className="col-auto">
                         <Link to="AddEngineer">
-                          <i
-                            className="fa-solid fa-circle-plus fa-2x text-gray-300 io"
-                          ></i>
+                          <i className="fa-solid fa-circle-plus fa-2x text-gray-300 io"></i>
                         </Link>
                       </div>
                     </div>
@@ -146,7 +140,7 @@ export default function Requests() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 ">
-                <div className="card border-left-success shadow  py-2">
+                <div className="card  shadow border-left-success shadow  py-2">
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
@@ -156,12 +150,89 @@ export default function Requests() {
                       </div>
                       <div className="col-auto">
                         <Link to="AddStore">
-                        <i
-                            className="fa-solid fa-circle-plus fa-2x text-gray-300 io"
-                          ></i>
+                          <i className="fa-solid fa-circle-plus fa-2x text-gray-300 io"></i>
                         </Link>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow  h-100 border-start-lg border-start-primary">
+                  <div class="card-body">
+                    <div class="small text-muted">Current monthly bill</div>
+                    <div class="h3">$20.00</div>
+                    <a class="text-arrow-icon small" href="#!">
+                      Switch to yearly billing
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow h-100 border-start-lg border-start-secondary">
+                  <div class="card-body">
+                    <div class="small text-muted">Next payment due</div>
+                    <div class="h3">July 15</div>
+                    <a class="text-arrow-icon small text-secondary" href="#!">
+                      View payment history
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card shadow  h-100 border-start-lg border-start-success">
+                  <div class="card-body">
+                    <div class="small text-muted">Current plan</div>
+                    <div class="h3 d-flex align-items-center">Freelancer</div>
+                    <a class="text-arrow-icon small text-success" href="#!">
+                      Upgrade plan
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -399,7 +470,7 @@ export default function Requests() {
                 </div>
               </div>
               <div className="col-xl-12 col-lg-7">
-              <div className="table-responsive card shadow mb-1">
+                <div className="table-responsive card shadow mb-1" style={{ height: "60vh" }}>
                   <table className="table table-hover">
                     <thead>
                       <tr>

@@ -66,7 +66,7 @@ export default function Profile() {
               <div className="main-box clearfix">
                 <div className="profile-header">
                   <h3>
-                    <span>User info</span>
+                    <span>Admin info</span>
                   </h3>
                   <Link href="#" className="btn btn-primary edit-profile">
                     <i className="fa fa-pencil-square fa-lg"></i> Edit profile
