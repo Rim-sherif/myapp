@@ -28,23 +28,28 @@ const Navbar = () => {
 
     const linkColor = document.querySelectorAll(".nav_link");
 
-    function colorLink() {
-      linkColor.forEach((l) => l.classList.remove("active"));
-      this.classList.add("active");
+  function colorLink() {
+    linkColor.forEach((l) => l.classList.remove("active"));
+    this.classList.add("active");
+  }
+
+  const headerToggle = document.getElementById("header-toggle");
+
+  // Validate that headerToggle exists
+  if (headerToggle) {
+    headerToggle.addEventListener("click", showNavbar);
+  }
+
+  linkColor.forEach((l) => l.addEventListener("click", colorLink));
+
+  // Cleanup function
+  return () => {
+    if (headerToggle) {
+      headerToggle.removeEventListener("click", showNavbar);
     }
-
-    document
-      .getElementById("header-toggle")
-      .addEventListener("click", showNavbar);
-    linkColor.forEach((l) => l.addEventListener("click", colorLink));
-
-    return () => {
-      document
-        .getElementById("header-toggle")
-        .removeEventListener("click", showNavbar);
-      linkColor.forEach((l) => l.removeEventListener("click", colorLink));
-    };
-  }, [isNavbarVisible]);
+    linkColor.forEach((l) => l.removeEventListener("click", colorLink));
+  };
+}, [isNavbarVisible]);
 
   return (
     <div id="body-pd" className="body">
@@ -131,7 +136,7 @@ const Navbar = () => {
               </li>
             </div>
           </div>
-          <Link to="/" className="nav_link">
+          <Link to="" className="nav_link">
             <i className="fa-solid fa-arrow-right-from-bracket fa-rotate-180 nav_icon"></i>
             <span className="nav_name">LogOut</span>
           </Link>
