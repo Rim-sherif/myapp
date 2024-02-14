@@ -9,7 +9,7 @@ export default function AddEngineer() {
         <div className="add-engineer bg-white  shadow m-auto py-5">
           <div className="d-flex justify-content-between px-4">
             <h3 className=" ">Add Engineer</h3>
-            <Link to="Requests">
+            <Link to="">
           <i className="fa-solid fa-xmark "></i></Link>
           </div>
           
