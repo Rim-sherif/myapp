@@ -20,7 +20,7 @@
 }
 
 
-.body {
+body {
   position: relative;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -164,20 +164,16 @@
   background-color: var(--white-color)
 }
 
-.height-100 {
-  margin-left: -30px;
-  
-
-}
+ .height-100 {
+ margin-left: -150px;
+   }
 
 /* admin login section */
 .container {
   border-radius: 30px;
   width: 300px;
   margin-top: 3rem;
-  
-
-}
+  }
 
 .admin-login {
   height: 100vh;
@@ -290,13 +286,12 @@
   padding: 15px;
   color: #fff;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 .warn {
   width: 45px;
   height: 45px;
-
   text-align: center;
   padding: 15px;
   color: #DD2920;
@@ -708,7 +703,7 @@ h3>span {
 }
 
 @media screen and (min-width: 768px) {
-  .body {
+  body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
     padding-left: calc(var(--nav-width) + 2rem)
   }

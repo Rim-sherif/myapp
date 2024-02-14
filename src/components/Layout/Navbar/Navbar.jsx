@@ -52,7 +52,7 @@ const Navbar = () => {
 }, [isNavbarVisible]);
 
   return (
-    <div id="body-pd" className="body">
+    <body id="body-pd" >
       <header className="header" id="header">
         <div className="header_toggle">
           <i
@@ -148,7 +148,7 @@ const Navbar = () => {
       </div>
 
       {/* Container Main end */}
-    </div>
+    </body>
   );
 };
 
