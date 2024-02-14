@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/myapp/static/css/main.4b66907c.css",
+    "main.js": "/myapp/static/js/main.ac903f24.js",
+    "static/media/fa-solid-900.ttf": "/myapp/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
+    "static/media/fa-brands-400.ttf": "/myapp/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
+    "static/media/fa-solid-900.woff2": "/myapp/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
+    "static/media/Rectangle 61.png": "/myapp/static/media/Rectangle 61.e7326aa08602f41f5997.png",
+    "static/media/fa-brands-400.woff2": "/myapp/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
+    "static/media/Rectangle 66.png": "/myapp/static/media/Rectangle 66.246fd57ad8635dee5e0d.png",
+    "static/media/error.svg": "/myapp/static/media/error.084f5f5b0eb10d3216cb7c939108e1f6.svg",
+    "static/media/Rectangle 61.jpg": "/myapp/static/media/Rectangle 61.de446e24d57ffef679b7.jpg",
+    "static/media/image_processing20200908-23070-1areanr 1.jpg": "/myapp/static/media/image_processing20200908-23070-1areanr 1.96bfbbfa84782ac9661e.jpg",
+    "static/media/Rectangle 63.jpg": "/myapp/static/media/Rectangle 63.e24b4ef68e79f6cf08a8.jpg",
+    "static/media/fa-regular-400.ttf": "/myapp/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
+    "static/media/image_processing20200908-23070-1areanr 1 (1).jpg": "/myapp/static/media/image_processing20200908-23070-1areanr 1 (1).7fdcc1b34e4ab3ec7419.jpg",
+    "static/media/Rectangle 65.jpg": "/myapp/static/media/Rectangle 65.e0473ee6a3f5fe1bedcb.jpg",
+    "static/media/Rectangle 64.jpg": "/myapp/static/media/Rectangle 64.194b864a3c1a1badf4a3.jpg",
+    "static/media/Rectangle 62.jpg": "/myapp/static/media/Rectangle 62.bbc499cc2b1f8f51f594.jpg",
+    "static/media/fa-regular-400.woff2": "/myapp/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
+    "static/media/fa-v4compatibility.ttf": "/myapp/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
+    "static/media/fa-v4compatibility.woff2": "/myapp/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
+    "index.html": "/myapp/index.html",
+    "main.4b66907c.css.map": "/myapp/static/css/main.4b66907c.css.map",
+    "main.ac903f24.js.map": "/myapp/static/js/main.ac903f24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b66907c.css",
+    "static/js/main.ac903f24.js"
+  ]
+}
