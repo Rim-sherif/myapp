@@ -1,62 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Joi from "joi";
+
+// import Joi from "joi";
 import img from "../.././../assets/images/images/image_processing20200908-23070-1areanr 1 (1).jpg";
 
-const schema = Joi.object({
-  mobileNumber: Joi.string()
-    .required()
-    .pattern(new RegExp(/^\d{12}$/)),
-});
+// const schema = Joi.object({
+//   mobileNumber: Joi.string()
+//     .required()
+//     .pattern(new RegExp(/^\d{12}$/)),
+// });
 
 export default function Login() {
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    setMobileNumber(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    const validationResult = schema.validate(
-      { mobileNumber },
-      { abortEarly: false }
-    );
-
-    if (validationResult.error) {
-      const newErrors = {};
-      validationResult.error.details.forEach((detail) => {
-        newErrors[detail.context.key] = detail.message;
-      });
-      setErrors(newErrors);
-    } else {
-      fetch("https://your-verification-api.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ mobileNumber }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // Handle the response from the verification API
-          // Redirect to the OTP page if verification is successful
-          if (data.success) {
-            // Redirect to OTP page
-            // You may use React Router for navigation
-          } else {
-            // Handle unsuccessful verification (e.g., show an error message)
-          }
-        })
-        .catch((error) => {
-          console.error("Error during API call:", error);
-        });
-    }
-  };
+  
+    
   return (
     <>
       <div className="admin-login py-5" id="loginn">
-        <div className="container">
+        <div className="">
           <div className="row ">
             <div className="col-lg-6">
               <div className="admin-login-form text-center">
@@ -79,34 +39,28 @@ export default function Login() {
                 <p className="py-3">
                   Please enter your mobile number to receive verification code.
                 </p>
-
+                <form >
+                  <div id="">
                 <div className="input-group mb-3">
                   <input
                     type="number"
-                    className={`form-control m-2 rounded-pill ${
-                      errors.mobileNumber ? "is-invalid" : ""
-                    }`}
+                    className={"form-control m-2 rounded-pill"}
                     placeholder="12XXX XXX38"
-                    value={mobileNumber}
-                    onChange={handleChange}
+                   
                   />
-                  {errors.mobileNumber && (
-                    <div className="invalid-feedback">
-                      {errors.mobileNumber}
-                    </div>
-                  )}
                 </div>
                 <Link to="Otp" className="Link">
                   <div className="d-grid my-5 col-6 mx-auto">
                     <button
                       className="btn admin-btn"
-                      type="button"
-                      onClick={handleSubmit}
+                      type="submit"
                     >
                       Get OTP
                     </button>
                   </div>
                 </Link>
+                </div>
+                </form>
               </div>
             </div>
             <div className="col-lg-6">
@@ -117,4 +71,5 @@ export default function Login() {
       </div>
     </>
   );
-}
+};
+

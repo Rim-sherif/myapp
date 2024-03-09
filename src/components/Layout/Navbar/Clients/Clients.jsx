@@ -8,8 +8,8 @@ import i from '../../../../assets/images/images/Rectangle 65.jpg';
 export default function Clients() {
   return (
     <>
-   <div className="client-section  bg-light">
-      <div className="container bg-white p-5">
+   <div className="client-section  ">
+      <div className="container  p-5">
         <div className="main-sec">
           <div className="d-flex justify-content-between">
             <div className="d-flex">
@@ -27,7 +27,7 @@ export default function Clients() {
           </div>
           <div className="row ">
             <div className="col-lg-3 col-md-6">
-              <div className="req-item shadow p-3 mt-5 ">
+              <div className="req-item bg-white shadow p-3 mt-5 ">
                 <div className="d-flex justify-content-between">
                   <ul className="fa-ul">
                     <li className="py-1">

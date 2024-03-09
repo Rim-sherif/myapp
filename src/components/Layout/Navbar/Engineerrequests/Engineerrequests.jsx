@@ -11,7 +11,7 @@ export default function Engineerrequests() {
   return (
   <>
      <div className="request-part  mt-5  ">
-      <div className="container p-5 bg-white  ">
+      <div className="container p-5   ">
         <div className="d-flex justify-content-between ">
           <div className="d-flex">
             <h3 className="fst h2">Requests</h3>
@@ -117,6 +117,66 @@ export default function Engineerrequests() {
           <div className="col-lg-2">
             <div className="req-item pt-3">
               <img src={img} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
+              <h4 className="py-1">Name</h4>
+              <div className="d-grid gap-2 d-md-block m-2">
+                <button className="btn m-1 btn-req1" type="button">Accept</button>
+                <button className="btn btn-req2" type="button">Deny</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2">
+            <div className="req-item pt-3">
+              <img src={imggg} alt="" className="w-75" />
               <h4 className="py-1">Name</h4>
               <div className="d-grid gap-2 d-md-block m-2">
                 <button className="btn m-1 btn-req1" type="button">Accept</button>

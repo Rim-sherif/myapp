@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
+import logo from '../../../assets/images/images/9829 3.png'
 
 const Navbar = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
+  
+  
 
   useEffect(() => {
     const showNavbar = () => {
@@ -60,33 +63,35 @@ const Navbar = () => {
             id="header-toggle"
           ></i>
         </div>
-        <form className="w-25" role="search">
+        
+        <div className=" "  >
           <input
-            className="form-control me-2"
+            className=" me-2 search-1"
             type="search"
-            placeholder="Search"
+            placeholder="   Search...."
             aria-label="Search"
           />
-        </form>
+        </div>
 
         <div>
-          <i className="fa-regular fa-bell style={{color: #000000}} app-header"></i>
+      
+          <i className="nav_icon fa-regular fa-bell fa-xl " style={{color: "#ffffff"}}></i>
           {"   "}
         </div>
-        <Link to="Profile">
-          {" "}
+        
+        <Link to="Profile">{" "}
+
           <div className="header_img">
             <img src="https://i.imgur.com/hczKIze.jpg" alt="" />{" "}
+            
           </div>
         </Link>
       </header>
       <div className={`l-navbar ${isNavbarVisible ? "show" : ""}`} id="nav-bar">
+              <img className= "logo_img" src={logo} alt="" />{" "}
         <nav className="nav">
           <div>
-            <Link to="Profile" className="nav_logo">
-              <i className="fa-solid fa-user-tie nav_logo-icon"></i>{" "}
-              <span className="nav_logo-name">Admin Control</span>{" "}
-            </Link>
+          
             <div className="nav_list">
               <Link to="Requests" className="nav_link">
                 <i className="fa-solid fa-grip-vertical fa-xl nav_icon"></i>{" "}
@@ -116,7 +121,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i className="fas fa-comments fs-5 bi-bootstrap"></i>{" "}
+                  <i className="fas fa-comments fs-5 bi-bootstrap nav_icon"></i>{" "}
                   <span className="nav_name ms-1 d-none d-sm-inline">
                     Requests
                   </span>{" "}
@@ -143,7 +148,7 @@ const Navbar = () => {
         </nav>
       </div>
       {/* Container Main start */}
-      <div className="height-100 bg-light">
+      <div className="height-100" >
         <Outlet />
       </div>
 

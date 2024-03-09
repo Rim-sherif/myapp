@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 // import img from '../../../../assets/images/images/Rectangle 62.jpg';
 
 export default function Profile() {
+  
   return (
     <div>
       <div className="admin-profile ">
         <div className="container p-5   w-75  bg-white  ">
           <div className="row" id="user-profile">
             <div className="col-lg-3 col-md-4 col-sm-4 h-100vh">
-              <div className="main-box ">
+              <div className="main-box left-side-profile">
                 <h2>John Doe </h2>
                 <div className="profile-status">
                   <i className="fa fa-check-circle"></i> Online
@@ -19,19 +20,17 @@ export default function Profile() {
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt=""
                     className="img-fluid"
-                    style={{ width: "180px", borderRadius: "10px" }}
+                    style={{ width: "190px", borderRadius: "10px" }}
                   />
                 </div>
-                <div className="profile-label">
-                  <span className="label label-danger">Admin</span>
-                </div>
+             
 
                 <div className="profile-stars">
                   <i className="fa fa-star"></i>
                   <i className="fa fa-star"></i>
                   <i className="fa fa-star"></i>
                   <i className="fa fa-star"></i>
-                  <i className="fa fa-star-o"></i>
+                  <i className="fa fa-star-o"></i>{" "}
                   <span>Super User</span>
                 </div>
 
@@ -47,18 +46,18 @@ export default function Profile() {
                       <i className="fa-li fa fa-comment"></i>Posts:{" "}
                       <span>828</span>
                     </li>
-                    <li>
+                    {/* <li>
                       <i className="fa-li fa fa-tasks"></i>Tasks done:{" "}
                       <span>1024</span>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
 
-                <div className="profile-message-btn center-block text-center">
+                {/* <div className="profile-message-btn center-block text-center">
                   <Link href="#" className="btn btn-success">
                     <i className="fa fa-envelope"></i> Send message
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -130,16 +129,21 @@ export default function Profile() {
                     </ul>
                   </div>
                 </div>
-                <div className="table-responsive">
-                  <table className="table table-hover">
+                <div className="col-xl-12 col-lg-7">
+                <div className="profile-header">
+                  <h3>
+                    <span>Your Activation</span>
+                  </h3>
+                  
+                </div>
+                <div className="table-responsive   mb-1" style={{ height: "60vh" }}>
+                  <table className="table ">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>User Profile</th>
-                        <th>User Name</th>
-                        <th>SignUP</th>
-                        <th>Posts</th>
-                        <th>Order Detail</th>
+                        <th>Admin</th>
+                        <th>Date</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody id="myTable">
@@ -153,14 +157,10 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>Alex John</td>
                         <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                        
+                        
                       </tr>
                       <tr>
                         <td>2</td>
@@ -172,14 +172,10 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>Romani capl</td>
                         <td>15/3/2023</td>
-                        <td>10</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                       
+                        
                       </tr>
                       <tr>
                         <td>3</td>
@@ -191,14 +187,10 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>David Androw</td>
                         <td>30/2/2024</td>
-                        <td>4</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                       
+                        
                       </tr>
                       <tr>
                         <td>4</td>
@@ -210,14 +202,10 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>Alex John</td>
                         <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                        
+                        
                       </tr>
                       <tr className="success">
                         <td>5</td>
@@ -229,14 +217,10 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>Alex John</td>
                         <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                        
+                        
                       </tr>
                       <tr>
                         <td>6</td>
@@ -248,96 +232,22 @@ export default function Profile() {
                             alt="Avatar"
                           />
                         </td>
-                        <td>Alex John</td>
                         <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
+                        <td>...</td>
+                        
+                        
                       </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
+                      
+                      
+                     
+                      
                     </tbody>
                   </table>
                 </div>
               </div>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>

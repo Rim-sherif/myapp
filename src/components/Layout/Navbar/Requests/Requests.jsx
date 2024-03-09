@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
-import "./Requests.module.scss";
 
 const cat = [
   {
@@ -78,10 +77,11 @@ const data = [
 ];
 
 export default function Requests() {
+
   return (
     <div>
-      <div className="request-part bg-light ">
-        <div className="container bg-white p-5">
+      <div className="request-part ">
+        <div className="container  p-5">
           <div className="main-sec">
             <div className="d-flex justify-content-between">
               <div className="d-flex">
@@ -95,7 +95,7 @@ export default function Requests() {
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
                         <div className="text-xs h5 font-weight-bold text-uppercase ">
-                          Pending Requests
+                          New Requests
                         </div>
                       </div>
                       <div className="col-auto">
@@ -158,87 +158,9 @@ export default function Requests() {
                 </div>
               </div>
 
-              <div class="col-lg-4 mb-4">
-                <div class="card shadow  h-100 border-start-lg border-start-primary">
-                  <div class="card-body">
-                    <div class="small text-muted">Current monthly bill</div>
-                    <div class="h3">$20.00</div>
-                    <a class="text-arrow-icon small" href="#!">
-                      Switch to yearly billing
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-arrow-right"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 mb-4">
-                <div class="card shadow h-100 border-start-lg border-start-secondary">
-                  <div class="card-body">
-                    <div class="small text-muted">Next payment due</div>
-                    <div class="h3">July 15</div>
-                    <a class="text-arrow-icon small text-secondary" href="#!">
-                      View payment history
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-arrow-right"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 mb-4">
-                <div class="card shadow  h-100 border-start-lg border-start-success">
-                  <div class="card-body">
-                    <div class="small text-muted">Current plan</div>
-                    <div class="h3 d-flex align-items-center">Freelancer</div>
-                    <a class="text-arrow-icon small text-success" href="#!">
-                      Upgrade plan
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-arrow-right"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
 
               <div className="col-xl-8 col-lg-7">
-                <div className="card shadow mb-4" style={{ height: "70vh" }}>
+                <div className="card shadow mb-4" style={{ height: "50vh" }}>
                   <ResponsiveBar
                     data={data}
                     keys={["hot dog", "burger", "sandwich"]}
@@ -349,7 +271,7 @@ export default function Requests() {
                 </div>
               </div>
               <div className="col-xl-4 col-lg-7">
-                <div className="card shadow mb-1" style={{ height: "70vh" }}>
+                <div className="card shadow mb-1" style={{ height: "50vh" }}>
                   <ResponsivePie
                     data={cat}
                     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -469,218 +391,12 @@ export default function Requests() {
                   />
                 </div>
               </div>
-              <div className="col-xl-12 col-lg-7">
-                <div className="table-responsive card shadow mb-1" style={{ height: "60vh" }}>
-                  <table className="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>User Profile</th>
-                        <th>User Name</th>
-                        <th>SignUP</th>
-                        <th>Posts</th>
-                        <th>Order Detail</th>
-                      </tr>
-                    </thead>
-                    <tbody id="myTable">
-                      <tr className="table-row">
-                        <td>1</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
-                            className="rounded-circle "
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Romani capl</td>
-                        <td>15/3/2023</td>
-                        <td>10</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-                            className="rounded-circle shadow-4"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>David Androw</td>
-                        <td>30/2/2024</td>
-                        <td>4</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr className="success">
-                        <td>5</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>
-                          <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            className="rounded-circle"
-                            style={{ width: "40px" }}
-                            alt="Avatar"
-                          />
-                        </td>
-                        <td>Alex John</td>
-                        <td>2/2/2022</td>
-                        <td>15</td>
-                        <td>
-                          <button type="button" className="btn  info-btn">
-                            Info
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

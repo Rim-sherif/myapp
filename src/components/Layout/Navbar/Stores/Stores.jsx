@@ -10,8 +10,8 @@ import imageee from '../../../../assets/images/images/Rectangle 65.jpg';
 export default function Stores() {
   return (
     <>
-    <div className="store-section mt-5  bg-light">
-      <div className="container bg-white p-5 ">
+    <div className="store-section mt-5  ">
+      <div className="container  p-5 ">
         <div className="main-sec">
           <div className="d-flex justify-content-between">
             <div className="d-flex">

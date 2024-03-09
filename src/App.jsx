@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import "./App.scss";
 import Login from "./components/Layout/Login/Login";
 import Otp from "./components/Layout/Otp/Otp";
@@ -61,6 +62,7 @@ const Router = createBrowserRouter([
 function App() {
   return (
     <>
+    
       <RouterProvider router={Router}></RouterProvider>
     </>
   );

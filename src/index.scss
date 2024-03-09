@@ -2,8 +2,8 @@
 
 :root {
   --header-height: 2rem;
-  --nav-width: 68px;
-  --first-color: #242760;
+  --nav-width: 75px;
+  --first-color: #070F2B;
   --first-color-light: #AFA5D9;
   --white-color: #F7F6FB;
   --body-font: 'Nunito', sans-serif;
@@ -22,6 +22,7 @@
 
 body {
   position: relative;
+  width: 100%;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -43,13 +44,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background-color: var(--white-color);
+  background-color: var(--first-color);
   z-index: var(--z-fixed);
   transition: .5s
 }
 
 .header_toggle {
-  color: var(--first-color);
+  color: var(--white-color);
   font-size: 1.5rem;
   cursor: pointer
 }
@@ -67,24 +68,31 @@ body {
   width: 40px
 }
 
+.logo_img{
+  width: 90px;
+  margin-top: -20px;
+}
+
 .l-navbar {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: -30%;
   width: var(--nav-width);
   height: 100vh;
   background-color: var(--first-color);
   padding: .5rem 1rem 0 0;
-  transition: .2s;
-  border-radius: 0 15px 15px 0;
+  transition: .3s;
   z-index: var(--z-fixed)
 }
 
 .nav {
-  height: 100%;
+  height: 65vh;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 5px 5px 10px rgba(206, 143, 63, 0.2);
   overflow: hidden
 }
 
@@ -134,7 +142,8 @@ body {
 }
 
 .nav_icon {
-  font-size: 1.25rem
+  font-size: 1.25rem;
+  margin-right: 20px;
 }
 
 .nav_icon1 {
@@ -142,13 +151,17 @@ body {
   color: #fff;
   opacity: .6;
 }
+.nav_list{
+  margin-top: 20px;
+}
 
 .show {
   left: 0
 }
 
 .body-pd {
-  padding-left: calc(var(--nav-width))
+  padding-left: calc(var(--nav-width));
+  
 }
 
 .active {
@@ -165,14 +178,20 @@ body {
 }
 
  .height-100 {
- margin-left: -150px;
+  margin-left: -133px;
+//  width: 2600px;
+//  right: 0;
+ background-color: var(--first-color);
+ margin-right: -100px;
+
    }
 
 /* admin login section */
 .container {
   border-radius: 30px;
-  width: 300px;
+  width: 500px;
   margin-top: 3rem;
+  background-color: #f6f6f9;
   }
 
 .admin-login {
@@ -230,6 +249,7 @@ body {
   text-align: center;
   border: 2px solid;
   border-radius: 15px;
+  background-color: white;
   border: 1px solid #acaaaa;
 }
 
@@ -300,6 +320,12 @@ body {
   margin-right: 10px;
 }
 
+.warn:hover,
+.edit:hover{
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
 /* add engineer */
 .add-engineer {
   width: 550px;
@@ -347,8 +373,6 @@ body {
 /* admin profile */
 .admin-profile {
   border-bottom: gray 1px solid;
-
-
 }
 
 .img1 {
@@ -360,17 +384,19 @@ body {
 /*request page*/
 .io {
   cursor: pointer;
-  padding: .5em;
+  // padding: .5em;
   color: #242760;
-  transition: color .25s ease-out, transform .5s ease-out;
+  transition: color .25s ease-out,
+  transform .5s ease-out;
 }
 
 .io:hover {
   transform: scale(1.3333);
   transition: transform .5s ease-out;
-  color: rgb(22, 22, 215);
+  color: rgb(67, 215, 22);
 
 }
+
 
 .border-start-primary {
   border-left-color: #0061f2 !important;
@@ -410,7 +436,7 @@ h3>span {
   }
 
   .edit-profile{
-      background-color: #242760;
+      background-color: #070F2B;
   }
 
   .info-btn{
@@ -435,7 +461,7 @@ h3>span {
     padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 170px;
+    width: 190px;
   }
 
   .profile-label {
@@ -449,12 +475,13 @@ h3>span {
   }
 
   .profile-stars {
-    color: #EC7E19;
+    color: #FFA800;
     padding: 7px 0;
     text-align: center;
 
     >i {
       margin-left: -2px;
+      padding: 2px;
     }
   }
 
@@ -484,7 +511,7 @@ h3>span {
         }
 
         >span {
-          color: #3B6E26;
+          color: #166FF6;
           
            
         }
@@ -542,6 +569,10 @@ h3>span {
 
       >i {
         padding-top: 6px;
+        color: #070707;
+      }
+      >a{
+        color: #166FF6;
       }
     }
 
@@ -705,14 +736,15 @@ h3>span {
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem)
+    padding-left: calc(var(--nav-width) )
   }
 
   .header {
     height: calc(var(--header-height) + 1rem);
     padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
   }
-
+ 
+  
   .header_img {
     width: 40px;
     height: 40px
@@ -728,6 +760,55 @@ h3>span {
   }
 
   .show {
+    width: calc(var(--nav-width) + 130px);
+    
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px)
+  }
+}
+@media screen and (max-width: 430px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem)
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+    position: fixed;
+  }
+  .height-100 {
+    width: 400px;
+    height: 880px;
+    }
+  
+  .header_img {
+    width: 40px;
+    height: 40px
+  }
+
+  .header_img img {
+    width: 45px
+  }
+  .add-engineer{
+    width: 360px;
+  }
+  #user-profile{
+    width: 400px;
+  }
+  .left-side-profile{
+    width: 200px;
+  }
+
+  .l-navbar {
+    left: 0;
+    position: fixed;
+    padding: 1rem 1rem 0 0
+  }
+
+  .show {
     width: calc(var(--nav-width) + 156px)
   }
 
@@ -736,3 +817,9 @@ h3>span {
   }
 }
 
+.search-1{
+  width: 350px;
+  height: 35px;
+  border-radius: 30px;
+  border:  1px;
+}

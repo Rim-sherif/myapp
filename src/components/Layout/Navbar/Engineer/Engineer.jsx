@@ -11,7 +11,7 @@ export default function Engineer() {
   return (
     <>
        <div className="engineer-section mt-5  ">
-      <div className="container bg-white p-5">
+      <div className="container p-5">
         <div className="main-sec">
           <div className="d-flex justify-content-between">
             <div className="d-flex">
