@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
+import { Modal } from "react-bootstrap";
 
 const cat = [
   {
@@ -76,7 +77,203 @@ const data = [
   },
 ];
 
+function MyVerticallyCenteredModal2(props) {
+  return (
+    <Modal
+      {...props}
+      size="s"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Add Engineer
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <div>
+          <div>
+            <form>
+              <div className="row g-3 px-3 add-form">
+                <div className="col-6 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="First name"
+                    aria-label="First name"
+                  />
+                </div>
+                <div className="col-6 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="Last name"
+                    aria-label="Last name"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="email"
+                    className="form-control shadow"
+                    placeholder="E-mail"
+                    aria-label="E-mail"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="Password"
+                    aria-label="Last name"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="number"
+                    className="form-control shadow"
+                    placeholder="Phone"
+                    aria-label="Phone"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="City"
+                    aria-label="City"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <label
+                    htmlFor="formFile"
+                    className="form-label text-muted px-2"
+                  >
+                    ID:
+                  </label>
+                  <input
+                    className="form-control w-100 shadow"
+                    type="file"
+                    id="formFile"
+                  />
+                </div>
+                <div className="text-center">
+                  <div className="d-grid gap-2 d-md-block p-3">
+                    <button
+                      className="btn px-4 btn-save mx-3 shadow"
+                      type="button"
+                      style={{
+                        backgroundColor: "#242760",
+                        color: "#fff",
+                      }}
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+}
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="s"
+      aria-labelledby="contained-modal-title-vcenter"
+      
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">Add Store</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <div>
+          <div>
+            <form>
+              <div className="row g-3 px-3 add-form">
+                <div className="col-6 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="First name"
+                    aria-label="First name"
+                  />
+                </div>
+                <div className="col-6 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="Last name"
+                    aria-label="Last name"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="email"
+                    className="form-control shadow"
+                    placeholder="E-mail"
+                    aria-label="E-mail"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="number"
+                    className="form-control shadow"
+                    placeholder="Phone"
+                    aria-label="Phone"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <input
+                    type="text"
+                    className="form-control shadow"
+                    placeholder="City"
+                    aria-label="City"
+                  />
+                </div>
+                <div className="col-12 py-2">
+                  <label
+                    htmlFor="formFile"
+                    className="form-label text-muted px-2"
+                  >
+                    ID:
+                  </label>
+                  <input
+                    className="form-control w-100 shadow"
+                    type="file"
+                    id="formFile"
+                  />
+                </div>
+                <div className="text-center">
+                  <div className="d-grid gap-2 d-md-block p-3">
+                    <button
+                      className="btn px-4 btn-save mx-3 shadow"
+                      type="button"
+                      style={{
+                        backgroundColor: "#242760",
+                        color: "#fff",
+                      }}
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+}
+
 export default function Requests() {
+  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow2, setModalShow2] = React.useState(false);
 
   return (
     <div>
@@ -121,24 +318,126 @@ export default function Requests() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 ">
+              <div className="col-lg-3 col-md-6">
                 <div className="card border-left-success shadow py-2">
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
-                        <div className="text-xs h5 font-weight-bold  text-uppercase mb-1">
+                        <div className="text-xs h5 font-weight-bold text-uppercase mb-1">
                           Add Engineer
                         </div>
                       </div>
                       <div className="col-auto">
-                        <Link to="AddEngineer">
-                          <i className="fa-solid fa-circle-plus fa-2x text-gray-300 io"></i>
-                        </Link>
+                        <button
+                          className="io bg-white"
+                          onClick={() => setModalShow2(true)}
+                        >
+                          <i className="fa-solid fa-circle-plus fa-2x "></i>
+                        </button>
+                        <MyVerticallyCenteredModal2
+                          show={modalShow2}
+                          onHide={() => setModalShow2(false)}
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* {showForm && (
+                <div className="add-engineer-sec mt-5">
+                  <div className="container">
+                    <div className="add-engineer bg-white shadow m-auto py-5">
+                      <div className="d-flex justify-content-between px-4">
+                        <h3 className=" ">Add Engineer</h3>
+                        <button onClick={handleIconClick}>
+                          <i className="fa-solid fa-xmark "></i>
+                        </button>
+                      </div>
+
+                      <div className="row g-3 px-3 add-form">
+                        <div className="col-6 py-2">
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="First name"
+                            aria-label="First name"
+                          />
+                        </div>
+                        <div className="col-6 py-2">
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Last name"
+                            aria-label="Last name"
+                          />
+                        </div>
+                        <div className="col-12 py-2">
+                          <input
+                            type="E-mail"
+                            className="form-control"
+                            placeholder="E-mail"
+                            aria-label="E-mail"
+                          />
+                        </div>
+                        <div className="col-12 py-2">
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Password"
+                            aria-label="Last name"
+                          />
+                        </div>
+                        <div className="col-12 py-2">
+                          <input
+                            type="number"
+                            className="form-control"
+                            placeholder="Phone"
+                            aria-label="Phone"
+                          />
+                        </div>
+                        <div className="col-12 py-2">
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="City"
+                            aria-label="Last name"
+                          />
+                        </div>
+                        <div className="col-12 py-2">
+                          <label
+                            for="formFile"
+                            className="form-label text-muted px-2"
+                          >
+                            ID:
+                          </label>
+                          <input
+                            className="form-control w-100"
+                            type="file"
+                            id="formFile"
+                          />
+                        </div>
+
+                        <div className="text-center">
+                          <div className="d-grid gap-2 d-md-block p-3">
+                            <button
+                              className="btn px-4 btn-req1 mx-3"
+                              type="button"
+                            >
+                              Save
+                            </button>
+                            <button
+                              className="btn px-4 btn-req2 mx-3"
+                              type="button"
+                            >
+                              Reset
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )} */}
               <div className="col-lg-3 col-md-6 ">
                 <div className="card  shadow border-left-success shadow  py-2">
                   <div className="card-body">
@@ -149,15 +448,21 @@ export default function Requests() {
                         </div>
                       </div>
                       <div className="col-auto">
-                        <Link to="AddStore">
-                          <i className="fa-solid fa-circle-plus fa-2x text-gray-300 io"></i>
-                        </Link>
+                        <button
+                          className="io bg-white"
+                          onClick={() => setModalShow(true)}
+                        >
+                          <i className="fa-solid fa-circle-plus fa-2x "></i>
+                        </button>
+                        <MyVerticallyCenteredModal
+                          show={modalShow}
+                          onHide={() => setModalShow(false)}
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
 
               <div className="col-xl-8 col-lg-7">
                 <div className="card shadow mb-4" style={{ height: "50vh" }}>
@@ -391,12 +696,10 @@ export default function Requests() {
                   />
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

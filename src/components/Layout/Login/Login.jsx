@@ -1,37 +1,53 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-// import Joi from "joi";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import img from "../.././../assets/images/images/image_processing20200908-23070-1areanr 1 (1).jpg";
-
-// const schema = Joi.object({
-//   mobileNumber: Joi.string()
-//     .required()
-//     .pattern(new RegExp(/^\d{12}$/)),
-// });
+import { useFormik } from "formik";
+import axios from "axios";
+import * as Yup from 'yup'
 
 export default function Login() {
-  
-    
+  let navigate = useNavigate()
+  let [apiError, setapiError] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+
+  let validationSchema = Yup.object({
+    phoneNumber: Yup.string().required("phone is required").matches(/^01[0-5]\d{1,8}$/, "phone is not correct")
+  })
+
+
+  let formik = useFormik({
+    initialValues: {
+      phoneNumber: ""
+    },
+    onSubmit: getCodeApi,
+    validationSchema
+  })
+
+  async function getCodeApi(value) {
+    let req = await axios.post("https://a2z-render.onrender.com/admin/phonenumber", value)
+      .catch((err) => {
+        setapiError(err.response.data.message)
+      })
+    console.log(req)
+    if (req.data.message === 'OTP sended') {
+      localStorage.setItem('phoneNumber', value.phoneNumber);
+      setPhoneNumber(value.phoneNumber);
+      navigate('/otp')
+    }
+
+
+  }
+
   return (
     <>
-      <div className="admin-login py-5" id="loginn">
+
+      <div className="admin-login py-5 bg-white" id="loginn">
         <div className="">
           <div className="row ">
             <div className="col-lg-6">
-              <div className="admin-login-form text-center">
+              <div className="admin-phone text-center">
                 <h1>welcome to our commuinty</h1>
-                {/* <svg
-                className="my-4"
-                
-                width="102"
-                height="102"
-                viewBox="0 0 102 102"
-                fill="none"
-              >
-                <circle cx="51" cy="51" r="51" fill="#D9D9D9" />
-              
-              </svg> */}
 
                 <img className="img1" src={img} alt=""></img>
 
@@ -39,28 +55,32 @@ export default function Login() {
                 <p className="py-3">
                   Please enter your mobile number to receive verification code.
                 </p>
-                <form >
-                  <div id="">
-                <div className="input-group mb-3">
-                  <input
-                    type="number"
-                    className={"form-control m-2 rounded-pill"}
-                    placeholder="12XXX XXX38"
-                   
-                  />
+
+                <div className="input-group mb-1">
+                  {apiError ? <div className="alert alert-danger w-100 ">{apiError}</div>
+                    : ""}
+                  <form action="" onSubmit={formik.handleSubmit}  >
+                    <input
+                      type="tel"
+                      className={`form-control m-2 rounded-pill `}
+                      placeholder="12XXX XXX38"
+                      name='phoneNumber' value={formik.values.phoneNumber} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+
+                    {formik.errors.phoneNumber && formik.touched.phoneNumber ? <div className='alert alert-danger py-2'>{formik.errors.phoneNumber}</div> : ""}
+                    <div className="d-grid mt-4 col-6 mx-auto admin-phone">
+                      <button
+                        className="btn admin-phone "
+                        type="submit"
+                        disabled={!(formik.isValid && formik.dirty)}
+
+                      >
+                        Get OTP
+                      </button>
+
+                    </div>
+
+                  </form>
                 </div>
-                <Link to="Otp" className="Link">
-                  <div className="d-grid my-5 col-6 mx-auto">
-                    <button
-                      className="btn admin-btn"
-                      type="submit"
-                    >
-                      Get OTP
-                    </button>
-                  </div>
-                </Link>
-                </div>
-                </form>
               </div>
             </div>
             <div className="col-lg-6">
@@ -71,5 +91,4 @@ export default function Login() {
       </div>
     </>
   );
-};
-
+}
