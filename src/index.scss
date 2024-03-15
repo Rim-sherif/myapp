@@ -182,7 +182,7 @@ body {
   background-color: var(--first-color);
   // height: 100vh;
   margin-top: 4rem;
-   margin-left: -140px;
+   margin-left: -139px;
 
 
 
@@ -369,11 +369,15 @@ padding: 10px !important;
 .req-describtion .btn-req1 {
   background-color: var(--maincolor);
   color: #fff;
+  margin: 10px;
+  width:100px;
 }
 
 .req-describtion .btn-req2 {
   background-color: #fff;
-  border-color: rgba(66, 88, 112, 0.4);
+  border-color: rgba(189, 29, 29, 0.4);
+  color: brown;
+  width:100px;
 }
 
 .main-sec .btn-req1 {
@@ -565,7 +569,11 @@ h3>span {
       font-size: 1em;
     }
   }
-
+  .flex-shrink-0{
+    align-items: center;
+    padding: 7px 0;
+    margin-left: 30px;
+  }
   .profile-stars {
     color: #FFA800;
     padding: 7px 0;
@@ -623,7 +631,17 @@ h3>span {
       position: absolute;
       right: 0;
       top: 0;
+      color: white;
     }
+  }
+
+  .save-profile{
+    margin-top: 6px;
+   margin-left: 250px;
+      position: absolute;
+      background-color: var(--first-color);
+      color: white;
+      width: 80px;
   }
 
   .profile-tabs {
@@ -953,5 +971,19 @@ h3>span {
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px)
   }
+  
 
 }
+
+// @media screen and (max-width: 576px){
+//      .height-100{
+//     margin-right: -30px;
+//   }
+// }
+
+// .custom-modal {
+//   // background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency as needed */
+//   // backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+//   margin-right: -30px;
+
+// }

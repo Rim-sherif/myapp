@@ -185,7 +185,8 @@ function MyVerticallyCenteredModal(props) {
       {...props}
       size="s"
       aria-labelledby="contained-modal-title-vcenter"
-      
+      className="custom-modal"
+      centered
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">Add Store</Modal.Title>
