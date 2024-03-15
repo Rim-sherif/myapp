@@ -5,6 +5,8 @@ export default function Profile() {
   const [name, setName] = useState("John Doe");
   const [email, setEmail] = useState("johndoe@bootdey.com");
   const [phoneNumber, setPhoneNumber] = useState("011 223 344 556 677");
+  const [gender, setGender] = useState("male"); // Add gender state
+  const [age, setAge] = useState("30");
   const [imageUrl, setImageUrl] = useState(
     "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
   );
@@ -19,7 +21,7 @@ export default function Profile() {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
-    
+
     reader.onloadend = () => {
       setImageUrl(reader.result);
     };
@@ -117,7 +119,11 @@ export default function Profile() {
                     <span>Admin info</span>
                   </h3>
                   {editMode ? (
-                    <button type="submit" className="btn edit-profile" onClick={handleSubmit}>
+                    <button
+                      type="submit"
+                      className="btn edit-profile"
+                      onClick={handleSubmit}
+                    >
                       Save
                     </button>
                   ) : (
@@ -131,40 +137,118 @@ export default function Profile() {
                 </div>
 
                 <div className="row profile-user-info">
-                  <div className="col-sm-8">
+                  <div className="col-sm-8 profile-user-details">
                     <form onSubmit={handleSubmit}>
-                      <div className="form-group">
-                        <label>Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          disabled={!editMode}
-                        />
-                      </div>
+                      {!editMode && (
+                        <div className="profile-user-details clearfix">
+                          <div className="profile-user-details-label">Name</div>
+                          <div className="profile-user-details-value">
+                            {name}
+                          </div>
+                        </div>
+                      )}
+                      {editMode && (
+                        <div className="form-group">
+                          <label>Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            disabled={!editMode}
+                          />
+                        </div>
+                      )}
 
-                      <div className="form-group">
-                        <label>Email</label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          disabled={!editMode}
-                        />
-                      </div>
+                      {!editMode && (
+                        <div className="profile-user-details clearfix">
+                          <div className="profile-user-details-label">
+                            Email
+                          </div>
+                          <div className="profile-user-details-value">
+                            {email}
+                          </div>
+                        </div>
+                      )}
+                      {editMode && (
+                        <div className="form-group">
+                          <label>Email</label>
+                          <input
+                            type="email"
+                            className="form-control"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            disabled={!editMode}
+                          />
+                        </div>
+                      )}
 
-                      <div className="form-group">
-                        <label>Phone Number</label>
-                        <input
-                          type="tel"
-                          className="form-control"
-                          value={phoneNumber}
-                          onChange={(e) => setPhoneNumber(e.target.value)}
-                          disabled={!editMode}
-                        />
-                      </div>
+                      {!editMode && (
+                        <div className="profile-user-details clearfix">
+                          <div className="profile-user-details-label">
+                          PhoneNumber
+                          </div>
+                          <div className="profile-user-details-value">
+                          {phoneNumber}
+                          </div>
+                        </div>
+                      )}
+                      {editMode && (
+                        <div className="form-group">
+                          <label>Phone Number</label> 
+                          <input
+                            type="tel"
+                            className="form-control"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            disabled={!editMode}
+                          />
+                        </div>
+                      )}
+
+{!editMode && (
+                        <div className="profile-user-details clearfix">
+                          <div className="profile-user-details-label">Gender</div>
+                          <div className="profile-user-details-value">
+                            {gender}
+                          </div>
+                        </div>
+                      )}
+                      {editMode && (
+                        <div className="form-group">
+                          <label>Gender</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={gender}
+                            onChange={(e) => setGender(e.target.value)}
+                            disabled={!editMode}
+                          />
+                        </div>
+                      )}
+
+                      {/* Age Input */}
+                      {!editMode && (
+                        <div className="profile-user-details clearfix">
+                          <div className="profile-user-details-label">Age</div>
+                          <div className="profile-user-details-value">
+                            {age}
+                          </div>
+                        </div>
+                      )}
+                      {editMode && (
+                        <div className="form-group">
+                          <label>Age</label>
+                          <input
+                            type="number"
+                            className="form-control"
+                            value={age}
+                            onChange={(e) => setAge(e.target.value)}
+                            disabled={!editMode}
+                          />
+                        </div>
+                      )}
+
                       {editMode && (
                         <div className="form-group">
                           <label>Image</label>
@@ -177,7 +261,6 @@ export default function Profile() {
                           />
                         </div>
                       )}
-                    
                     </form>
                   </div>
                 </div>

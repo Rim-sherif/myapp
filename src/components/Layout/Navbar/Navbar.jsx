@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from '../../../assets/images/images/9829 3.png'
 
+
 const Navbar = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   
@@ -75,17 +76,20 @@ const Navbar = () => {
 
         <div>
       
-          <i className="nav_icon fa-regular fa-bell fa-xl " style={{color: "#ffffff"}}></i>
+          {/* <i className="nav_icon fa-regular fa-bell fa-xl " style={{color: "#ffffff"}}></i> */}
           {"   "}
         </div>
         
         <Link to="Profile">{" "}
 
           <div className="header_img">
-            <img src="https://i.imgur.com/hczKIze.jpg" alt="" />{" "}
+            
+            <img src="https://i.imgur.com/hczKIze.jpg" alt="" className="d-inline-block align-top" />{"  "}
             
           </div>
         </Link>
+    
+        
       </header>
       <div className={`l-navbar ${isNavbarVisible ? "show" : ""}`} id="nav-bar">
               <img className= "logo_img" src={logo} alt="" />{" "}

@@ -281,11 +281,11 @@ export default function Requests() {
       <div className="request-part ">
         <div className="container  p-5">
           <div className="main-sec">
-            <div className="d-flex justify-content-between">
+            {/* <div className="d-flex justify-content-between">
               <div className="d-flex">
                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
               </div>
-            </div>
+            </div> */}
             <div className="row mt-3 g-5">
               <div className="col-lg-3 col-md-6">
                 <div className="card border-left-warning shadow   py-2">
@@ -303,7 +303,7 @@ export default function Requests() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 ">
+              <div className="col-lg-3 col-md-6">
                 <div className="card border-left-success shadow  py-2">
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">

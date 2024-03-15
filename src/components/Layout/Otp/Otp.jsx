@@ -21,13 +21,14 @@ export default function Otp() {
   const formik = useFormik({
     initialValues: {
       OTP: '',
-      phoneNumber: phoneNumber || '', // Set phoneNumber from localStorage or an empty string
+      phoneNumber: phoneNumber || '',
     },
     onSubmit: OtpCode,
     validationSchema,
   });
 
   async function OtpCode(values) {
+   
     try {
       const req = await axios.post("https://a2z-render.onrender.com/admin/OTP", values);
       console.log(req);
@@ -45,6 +46,7 @@ export default function Otp() {
 
   return (
     <div className="admin-login py-5" id='ootp'>
+      
   <div className="">
     <div className="row">
       <div className="col-lg-6">

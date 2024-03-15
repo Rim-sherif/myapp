@@ -60,7 +60,13 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 50%;
+  left:5px;
   overflow: hidden
+}
+.adminName{
+  color:white;
+  right: 0;
+  
 }
 
 .header_img img {
@@ -83,6 +89,7 @@ body {
   transition: .5s;
   z-index: var(--z-fixed)
 }
+
 
 .nav {
   height: 65vh;
@@ -137,7 +144,7 @@ body {
 }
 
 .nav_link:hover {
-  color: var(--white-color)
+  color: #DEB24F
 }
 
 .nav_icon {
@@ -974,6 +981,15 @@ h3>span {
   
 
 }
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  
+
+  /* Add any additional styles you want */
+}
+
 
 // @media screen and (max-width: 576px){
 //      .height-100{
@@ -987,3 +1003,29 @@ h3>span {
 //   margin-right: -30px;
 
 // }
+
+
+// CSS
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust as needed */
+  transform: translateY(-50%);
+}
+
+.spinner {
+  display: inline-block;
+  top:0;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #007bff; /* Change color as needed */
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
