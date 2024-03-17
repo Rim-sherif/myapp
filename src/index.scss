@@ -10,7 +10,6 @@
   --normal-font-size: 1rem;
   --z-fixed: 100;
   --maincolor: #242760;
-
 }
 
 *,
@@ -26,6 +25,16 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: .5s
+}
+
+.height-100 {
+  background-color: var(--first-color);
+  height: 100%;
+  margin-top: 4rem;
+  margin-left: -140px;
+  padding: 0 1rem;
+
+
 }
 
 .Link {
@@ -60,13 +69,14 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 50%;
-  left:5px;
+  left: 5px;
   overflow: hidden
 }
-.adminName{
-  color:white;
+
+.adminName {
+  color: white;
   right: 0;
-  
+
 }
 
 .header_img img {
@@ -184,17 +194,6 @@ body {
   background-color: var(--white-color)
 }
 
-
-.height-100 {
-  background-color: var(--first-color);
-  // height: 100vh;
-  margin-top: 4rem;
-   margin-left: -139px;
-
-
-
-}
-
 /* admin login section */
 .container {
   border-radius: 30px;
@@ -219,26 +218,13 @@ body {
   background: #242760;
   color: #fff;
   font-size: 20px;
-  width:100% !important;
+  width: 100% !important;
 
 }
 
 .admin-phone .btn:hover {
   border-color: #242760;
 }
-
-
-// .admin-phone input {
-//   border: 2px solid #445971;
-//   border-radius: 5px;
-// padding: 10px !important;
-//   width: 2rem !important;
-//   font-size: 1.3rem !important;
-
-// }
-
-
-
 
 //end admin phone
 
@@ -247,7 +233,7 @@ body {
   border-radius: 30px;
   width: 300px;
   margin-top: 3rem;
-  }
+}
 
 .admin-login {
   height: 100vh;
@@ -290,10 +276,6 @@ body {
 }
 
 
-
-
-
-
 /* admin login section p2 */
 .admin-login-form .otp-number .otp {
   width: 50px;
@@ -307,29 +289,21 @@ body {
 
 // otp stylingggggg
 
-
-
 .admin-login-form input {
   border: 2px solid #445971;
   border-radius: 5px;
-padding: 10px !important;
+  padding: 10px !important;
   width: 2rem !important;
   font-size: 1.3rem !important;
 
 }
 
-// end
-
 .otp-input input {
   border: 1px solid #ccc;
   border-radius: 7px;
   padding: 5px;
-  font-size: 16px; /* Adjust padding as needed */
+  font-size: 16px;
 }
-
-
-
-
 
 /* request section */
 .req-item {
@@ -377,14 +351,14 @@ padding: 10px !important;
   background-color: var(--maincolor);
   color: #fff;
   margin: 10px;
-  width:100px;
+  width: 100px;
 }
 
 .req-describtion .btn-req2 {
   background-color: #fff;
   border-color: rgba(189, 29, 29, 0.4);
   color: brown;
-  width:100px;
+  width: 100px;
 }
 
 .main-sec .btn-req1 {
@@ -399,7 +373,6 @@ padding: 10px !important;
   height: 45px;
   background-color: var(--maincolor);
   text-align: center;
-
   color: #fff;
   border-radius: 10px;
   margin-right: 3px;
@@ -416,11 +389,6 @@ padding: 10px !important;
   margin-right: 10px;
 }
 
-// .warn:hover,
-// .edit:hover {
-//   transform: scale(1.2);
-//   margin-right: 10px;
-// }
 
 .div-hov:hover {
   transform: scale(1.1);
@@ -474,7 +442,6 @@ padding: 10px !important;
 
 /* admin profile */
 .admin-profile {
-  width: 1300px;
   border-bottom: gray 1px solid;
 }
 
@@ -576,11 +543,13 @@ h3>span {
       font-size: 1em;
     }
   }
-  .flex-shrink-0{
+
+  .flex-shrink-0 {
     align-items: center;
     padding: 7px 0;
     margin-left: 30px;
   }
+
   .profile-stars {
     color: #FFA800;
     padding: 7px 0;
@@ -642,13 +611,13 @@ h3>span {
     }
   }
 
-  .save-profile{
+  .save-profile {
     margin-top: 6px;
-   margin-left: 250px;
-      position: absolute;
-      background-color: var(--first-color);
-      color: white;
-      width: 80px;
+    margin-left: 250px;
+    position: absolute;
+    background-color: var(--first-color);
+    color: white;
+    width: 100px;
   }
 
   .profile-tabs {
@@ -663,7 +632,6 @@ h3>span {
       padding: 4px 0;
 
       .profile-user-details-label {
-
         bottom: 0;
         font-weight: bold;
         margin-left: -4px;
@@ -978,47 +946,35 @@ h3>span {
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px)
   }
-  
+
+  .nav {
+    height: 65vh;
+  }
+
 
 }
+
 .icon {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  
-
-  /* Add any additional styles you want */
 }
 
 
-// @media screen and (max-width: 576px){
-//      .height-100{
-//     margin-right: -30px;
-//   }
-// }
-
-// .custom-modal {
-//   // background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency as needed */
-//   // backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-//   margin-right: -30px;
-
-// }
-
-
-// CSS
+// loading 
 .spinner-container {
   position: absolute;
   top: 50%;
-  right: 20px; /* Adjust as needed */
+  right: 20px;
   transform: translateY(-50%);
 }
 
 .spinner {
   display: inline-block;
-  top:0;
+  top: 0;
   border: 3px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border-top-color: #007bff; /* Change color as needed */
+  border-top-color: #007bff;
   width: 20px;
   height: 20px;
   animation: spin 1s linear infinite;
@@ -1029,3 +985,33 @@ h3>span {
     transform: rotate(360deg);
   }
 }
+
+
+// .admin-phone input {
+//   border: 2px solid #445971;
+//   border-radius: 5px;
+// padding: 10px !important;
+//   width: 2rem !important;
+//   font-size: 1.3rem !important;
+
+// }
+
+
+// @media screen and (max-width: 576px){
+//      .height-100{
+//     margin-right: -30px;
+//   }
+// }
+
+// .custom-modal {
+//   background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency as needed */
+//   backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+//   width:min-content;
+
+// }
+
+// .warn:hover,
+// .edit:hover {
+//   transform: scale(1.2);
+//   margin-right: 10px;
+// }

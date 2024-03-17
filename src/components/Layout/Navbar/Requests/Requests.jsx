@@ -83,6 +83,7 @@ function MyVerticallyCenteredModal2(props) {
       {...props}
       size="s"
       aria-labelledby="contained-modal-title-vcenter"
+      className="modal-0"
       centered
     >
       <Modal.Header closeButton>
@@ -95,20 +96,12 @@ function MyVerticallyCenteredModal2(props) {
           <div>
             <form>
               <div className="row g-3 px-3 add-form">
-                <div className="col-6 py-2">
+                <div className="col-12 py-2">
                   <input
                     type="text"
                     className="form-control shadow"
-                    placeholder="First name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div className="col-6 py-2">
-                  <input
-                    type="text"
-                    className="form-control shadow"
-                    placeholder="Last name"
-                    aria-label="Last name"
+                    placeholder="User name"
+                    aria-label="User name"
                   />
                 </div>
                 <div className="col-12 py-2">
@@ -135,6 +128,35 @@ function MyVerticallyCenteredModal2(props) {
                     aria-label="Phone"
                   />
                 </div>
+                <div class="col-6 py-2"> 
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                    />
+                    <label class="form-check-label" for="male">
+                      Male
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6 py-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                    />
+                    <label class="form-check-label" for="female">
+                      Female
+                    </label>
+                  </div>
+                </div>
+
                 <div className="col-12 py-2">
                   <input
                     type="text"

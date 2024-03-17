@@ -56,6 +56,7 @@ const Navbar = () => {
 }, [isNavbarVisible]);
 
   return (
+    < >
     <body id="body-pd" >
       <header className="header" id="header">
         <div className="header_toggle">
@@ -65,15 +66,14 @@ const Navbar = () => {
           ></i>
         </div>
         
-        <div className=" "  >
-          <input
-            className=" me-2 search-1"
-            type="search"
-            placeholder="   Search...."
-            aria-label="Search"
-          />
-        </div>
-
+        <form className="w-25" role="search">
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </form>
         <div>
       
           {/* <i className="nav_icon fa-regular fa-bell fa-xl " style={{color: "#ffffff"}}></i> */}
@@ -130,7 +130,7 @@ const Navbar = () => {
                     Requests
                   </span>{" "}
                 </Link>
-                <ul className="dropdown-menu text-small shadow">
+                <ul className="dropdown-menu text-small  shadow">
                   <li>
                     <Link className="dropdown-item" to="Engineerrequests">
                       Enginneer Requests
@@ -158,6 +158,7 @@ const Navbar = () => {
 
       {/* Container Main end */}
     </body>
+    </>
   );
 };
 

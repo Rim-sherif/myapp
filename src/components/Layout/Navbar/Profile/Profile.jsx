@@ -32,7 +32,7 @@ export default function Profile() {
   };
 
   return (
-    <div className="container">
+    <div className="">
       <div className="admin-profile mt-5">
         <div className="container p-5  bg-white">
           <div className="row" id="user-profile">

@@ -5,7 +5,7 @@ import img from "../.././../assets/images/images/image_processing20200908-23070-
 import icon from "../../../assets/images/icons/egypt 1.png";
 import { useFormik } from "formik";
 import axios from "axios";
-import { toast, Toaster } from "react-hot-toast";
+// import { toast, Toaster } from "react-hot-toast";
 import * as Yup from "yup";
 
 export default function Login() {
@@ -29,7 +29,7 @@ export default function Login() {
   });
 
   async function getCodeApi(value) {
-    toast.success("OTP sended successfully!");
+    // toast.success("OTP sended successfully!");
     setLoading(true);
     let req = await axios
       .post("https://a2z-render.onrender.com/admin/phonenumber", value)
@@ -50,7 +50,7 @@ export default function Login() {
   return (
     <>
       <div className="admin-login py-5 bg-white" id="loginn">
-        <Toaster toastOptions={{ duration: 4000 }} />
+        {/* <Toaster toastOptions={{ duration: 4000 }} /> */}
         <div className="">
           <div className="row ">
             <div className="col-lg-6">
