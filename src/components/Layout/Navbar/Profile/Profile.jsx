@@ -17,6 +17,27 @@ export default function Profile() {
 
     setEditMode(false);
   };
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//   try {
+//     const response = await fetch("https://a2z-render.onrender.com/admin/phonenumber", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({ name,phoneNumber,email })
+//     });
+    
+//     if (!response.ok) {
+//       throw new Error("Failed to update phone number");
+//     }
+    
+  
+//     setEditMode(false);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
