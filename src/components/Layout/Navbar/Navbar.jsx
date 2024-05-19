@@ -76,7 +76,7 @@ const Navbar = () => {
               </form>
         <div>
       
-          {/* <i className="nav_icon fa-regular fa-bell fa-xl " style={{color: "#ffffff"}}></i> */}
+          
           {"   "}
         </div>
         

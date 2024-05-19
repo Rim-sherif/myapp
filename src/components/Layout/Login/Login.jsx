@@ -38,7 +38,7 @@ export default function Login() {
       });
     console.log(req);
     if (req.data.message === "OTP sended") {
-      
+      console.log(req)
       localStorage.setItem("phoneNumber", value.phoneNumber);
       setPhoneNumber(value.phoneNumber);
       setLoading(false);

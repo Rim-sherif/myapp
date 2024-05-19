@@ -137,7 +137,7 @@ function MyVerticallyCenteredModal2(props) {
                       id="male"
                       value="male"
                     />
-                    <label class="form-check-label" for="male">
+                    <label className="font-color" class="form-check-label" for="male">
                       Male
                     </label>
                   </div>
@@ -151,7 +151,7 @@ function MyVerticallyCenteredModal2(props) {
                       id="female"
                       value="female"
                     />
-                    <label class="form-check-label" for="female">
+                    <label className="font-color" class="form-check-label" for="female">
                       Female
                     </label>
                   </div>
@@ -166,9 +166,9 @@ function MyVerticallyCenteredModal2(props) {
                   />
                 </div>
                 <div className="col-12 py-2">
-                  <label
+                  <label 
                     htmlFor="formFile"
-                    className="form-label text-muted px-2"
+                    className="form-label text-muted px-2 font-color"
                   >
                     ID:
                   </label>
@@ -259,9 +259,9 @@ function MyVerticallyCenteredModal(props) {
                   />
                 </div>
                 <div className="col-12 py-2">
-                  <label
+                  <label 
                     htmlFor="formFile"
-                    className="form-label text-muted px-2"
+                    className="form-label text-muted px-2font-color"
                   >
                     ID:
                   </label>
@@ -303,11 +303,7 @@ export default function Requests() {
       <div className="request-part ">
         <div className="container  p-5">
           <div className="main-sec">
-            {/* <div className="d-flex justify-content-between">
-              <div className="d-flex">
-                <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-              </div>
-            </div> */}
+         
             <div className="row mt-3 g-5">
               <div className="col-lg-3 col-md-6">
                 <div className="card border-left-warning shadow   py-2">
@@ -366,101 +362,7 @@ export default function Requests() {
                   </div>
                 </div>
               </div>
-              {/* {showForm && (
-                <div className="add-engineer-sec mt-5">
-                  <div className="container">
-                    <div className="add-engineer bg-white shadow m-auto py-5">
-                      <div className="d-flex justify-content-between px-4">
-                        <h3 className=" ">Add Engineer</h3>
-                        <button onClick={handleIconClick}>
-                          <i className="fa-solid fa-xmark "></i>
-                        </button>
-                      </div>
-
-                      <div className="row g-3 px-3 add-form">
-                        <div className="col-6 py-2">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="First name"
-                            aria-label="First name"
-                          />
-                        </div>
-                        <div className="col-6 py-2">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Last name"
-                            aria-label="Last name"
-                          />
-                        </div>
-                        <div className="col-12 py-2">
-                          <input
-                            type="E-mail"
-                            className="form-control"
-                            placeholder="E-mail"
-                            aria-label="E-mail"
-                          />
-                        </div>
-                        <div className="col-12 py-2">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Password"
-                            aria-label="Last name"
-                          />
-                        </div>
-                        <div className="col-12 py-2">
-                          <input
-                            type="number"
-                            className="form-control"
-                            placeholder="Phone"
-                            aria-label="Phone"
-                          />
-                        </div>
-                        <div className="col-12 py-2">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="City"
-                            aria-label="Last name"
-                          />
-                        </div>
-                        <div className="col-12 py-2">
-                          <label
-                            for="formFile"
-                            className="form-label text-muted px-2"
-                          >
-                            ID:
-                          </label>
-                          <input
-                            className="form-control w-100"
-                            type="file"
-                            id="formFile"
-                          />
-                        </div>
-
-                        <div className="text-center">
-                          <div className="d-grid gap-2 d-md-block p-3">
-                            <button
-                              className="btn px-4 btn-req1 mx-3"
-                              type="button"
-                            >
-                              Save
-                            </button>
-                            <button
-                              className="btn px-4 btn-req2 mx-3"
-                              type="button"
-                            >
-                              Reset
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )} */}
+              
               <div className="col-lg-3 col-md-6 ">
                 <div className="card  shadow border-left-success shadow  py-2">
                   <div className="card-body">
@@ -486,7 +388,112 @@ export default function Requests() {
                   </div>
                 </div>
               </div>
-
+              <div className=" addproduct mt-5 mb-3">
+      <div className="row">
+        <div className="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div className="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div className="row">
+              <div className="col-12">
+                <h2 className="tm-block-title d-inline-block font-color">Add Product</h2>
+              </div>
+            </div>
+            <div className="row tm-edit-product-row">
+              <div className="col-xl-6 col-lg-6 col-md-12">
+                <form className="tm-edit-product-form">
+                  <div className="form-group mb-3">
+                    <label className="font-color" htmlFor="name">Product Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      className="form-control validate"
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label className="font-color" htmlFor="description">Description</label>
+                  <textarea className="form-control validate" rows="3" required></textarea>
+                  </div>
+                  <div className="form-group mb-3">
+                    <label className="font-color" htmlFor="category">Category</label>
+                    <select className="custom-select tm-select-accounts" id="category">
+                      <option defaultValue>Select category</option>
+                      <option value="1">New Arrival</option>
+                      <option value="2">Most Popular</option>
+                      <option value="3">Trending</option>
+                    </select>
+                  </div>
+                  <div className="row">
+                    <div className="form-group mb-3 col-xs-12 col-sm-6">
+                      <label className="font-color" htmlFor="expire_date">Expire Date</label>
+                      <input
+                        id="expire_date"
+                        name="expire_date"
+                        type="text"
+                        className="form-control validate"
+                        data-large-mode="true"
+                      />
+                    </div>
+                    <div className="form-group mb-3 col-xs-12 col-sm-6">
+                      <label className="font-color" htmlFor="stock">Units In Stock</label>
+                      <input
+                        id="stock"
+                        name="stock"
+                        type="text"
+                        className="form-control validate"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="form-group mb-3 col-xs-12 col-sm-6">
+                      <label className="font-color" htmlFor="expire_date">Price</label>
+                      <input
+                        id="expire_date"
+                        name="expire_date"
+                        type="text"
+                        className="form-control validate"
+                        data-large-mode="true"
+                      />
+                    </div>
+                    <div className="form-group mb-3 col-xs-12 col-sm-6">
+                      <label className="font-color" htmlFor="stock">Price After Discount</label>
+                      <input
+                        id="stock"
+                        name="stock"
+                        type="text"
+                        className="form-control validate"
+                        required
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div className="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                <div className="tm-product-img-dummy mx-auto">
+                  <i
+                    className="fas fa-cloud-upload-alt tm-upload-icon"
+                    onClick={() => document.getElementById('fileInput').click()}
+                  ></i>
+                </div>
+                <div className="custom-file mt-3 mb-3">
+                  <input id="fileInput" type="file" style={{ display: 'none' }} />
+                  <input
+                    type="button"
+                    className="btn  btn-block mx-auto btn-color"
+                    value="UPLOAD PRODUCT IMAGE"
+                    onClick={() => document.getElementById('fileInput').click()}
+                  />
+                </div>
+              </div>
+              <div className="col-12">
+                <button type="submit" className="btn btn-color btn-block text-uppercase">Add Product Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
               <div className="col-xl-8 col-lg-7">
                 <div className="card shadow mb-4" style={{ height: "50vh" }}>
                   <ResponsiveBar
@@ -719,6 +726,7 @@ export default function Requests() {
                   />
                 </div>
               </div>
+               
             </div>
           </div>
         </div>

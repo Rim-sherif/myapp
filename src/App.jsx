@@ -12,6 +12,11 @@ import Engineerrequests from "./components/Layout/Navbar/Engineerrequests/Engine
 import Storesrequests from "./components/Layout/Navbar/Storesrequests/Storesrequests";
 import ErrorHandel from "./components/Layout/Navbar/error/error";
 import Requests from "./components/Layout/Navbar/Requests/Requests";
+import { useContext, useEffect } from "react";
+import { UserContext } from "./components/context/userToken";
+
+
+
 
 const Router = createBrowserRouter([
   {
@@ -42,6 +47,13 @@ const Router = createBrowserRouter([
 ]);
 
 function App() {
+  let {setUserToken} = useContext(UserContext)
+
+  useEffect(()=>{
+    if(localStorage.getItem('userToken') !== null){
+      setUserToken(localStorage.getItem('userToken'))
+    }
+  })
   return (
     <div className="root">
       <RouterProvider router={Router}></RouterProvider>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Link} from 'react-router-dom';
 import  { useState } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -7,9 +7,11 @@ import img from '../../../assets/images/images/image_processing20200908-23070-1a
 import { useFormik } from 'formik';
 import axios from "axios";
 import * as Yup from 'yup'
+import {UserContext} from '../../context/userToken'
 
 
 export default function Otp() {
+  let {setUserToken} = useContext(UserContext)
   let navigate = useNavigate()
   const [apiError, setApiError] = useState('');
   const phoneNumber = localStorage.getItem('phoneNumber');
@@ -30,10 +32,12 @@ export default function Otp() {
   async function OtpCode(values) {
    
     try {
-      const req = await axios.post("https://a2z-render.onrender.com/admin/OTP", values);
-      console.log(req);
-      if (req.data.message === 'loggin Done') {
+      let {data} = await axios.post("https://a2z-render.onrender.com/admin/OTP", values);
+      console.log(data);
+      if (data.message === 'loggin Done') {
         navigate('/navbar')
+        localStorage.setItem('userToken',data.adminUpdated.token)
+        setUserToken(localStorage.setItem('userToken'))
       }
     } catch (err) {
       if (err.response && err.response.data && err.response.data.message) {
