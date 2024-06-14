@@ -1,7 +1,7 @@
 import React from 'react'
-import imgg from '../../../../assets/images/images/Rectangle 61.jpg'
-import img  from '../../../../assets/images/images/Rectangle 62.jpg'
-import imggg from '../../../../assets/images/images/Rectangle 63.jpg'
+import imgg from '../../assets/images/images/Rectangle 61.jpg'
+import img  from '../../assets/images/images/Rectangle 62.jpg'
+import imggg from '../../assets/images/images/Rectangle 63.jpg'
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 

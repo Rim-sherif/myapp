@@ -1,14 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import { Modal } from "react-bootstrap";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
-
-
-
+import { Link } from "react-router-dom";
 
 function MyVerticallyCenteredModal2(props) {
   const [apiError, setApiError] = useState("");
@@ -30,7 +27,7 @@ function MyVerticallyCenteredModal2(props) {
       .min(18, "Age must be at least 18")
       .max(100, "Age must be at most 100"),
     address: Yup.string().required("Address is required"),
-    spicialAt: Yup.string().required("Major is required"),
+    spicalAt: Yup.string().required("Major is required"),
   });
 
   const formik = useFormik({
@@ -42,7 +39,7 @@ function MyVerticallyCenteredModal2(props) {
       gender: "",
       age: "",
       address: "",
-      spicialAt: "",
+      spicalAt: "",
     },
     validationSchema,
     onSubmit: async (values) => {
@@ -82,14 +79,14 @@ function MyVerticallyCenteredModal2(props) {
           <Toaster toastOptions={{ duration: 4000 }} />
           <form onSubmit={formik.handleSubmit}>
             <div className="row g-3 px-3 add-form">
-            <div className="row py-2 mt-3">
-  <div className="col-md-10 text-start">
-    <h5>Add Engineer</h5>
-  </div>
-  <div className="col-md-2 text-end">
-    <button className="btn-close" onClick={props.onHide}></button>
-  </div>
-</div>
+              <div className="row py-2 mt-3">
+                <div className="col-md-10 text-start">
+                  <h5>Add Engineer</h5>
+                </div>
+                <div className="col-md-2 text-end">
+                  <button className="btn-close" onClick={props.onHide}></button>
+                </div>
+              </div>
               <div className="col-12 py-2">
                 <input
                   type="text"
@@ -196,8 +193,8 @@ function MyVerticallyCenteredModal2(props) {
                 <select
                   className="form-control shadow"
                   aria-label="Major"
-                  name="spicialAt"
-                  value={formik.values.spicialAt}
+                  name="spicalAt"
+                  value={formik.values.spicalAt}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
@@ -207,9 +204,9 @@ function MyVerticallyCenteredModal2(props) {
                   <option value="Major3" label="Major3" />
                   <option value="Major4" label="Major4" />
                 </select>
-                {formik.touched.spicialAt && formik.errors.spicialAt ? (
+                {formik.touched.spicalAt && formik.errors.spicalAt ? (
                   <div className="alert alert-danger py-2 mt-2">
-                    {formik.errors.spicialAt}
+                    {formik.errors.spicalAt}
                   </div>
                 ) : null}
               </div>
@@ -272,11 +269,136 @@ export default function Requests() {
 
   return (
     <div>
-      <div className="request-part">
+      <div className="request-part ">
         <div className="container p-5">
           <div className="main-sec">
             <h4>Dashboard</h4>
+
             <div className="row mt-3 g-5">
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class=" tm-block-card1">
+                  <div class="card-body p-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="numbers">
+                          <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                            Today's Money
+                          </p>
+                          <h5 class="font-weight-bolder">$53,000</h5>
+                          <p class="mb-0">
+                            <span class="text-success text-sm font-weight-bolder">
+                              +55%
+                            </span>
+                            since yesterday
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle d-flex align-items-center justify-content-center">
+                          <i
+                            class="fa-solid fa-sack-dollar fa-lg opacity-10"
+                            style={{ color: "#ffffff" }}
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class=" tm-block-card1">
+                  <div class="card-body p-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="numbers">
+                          <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                            Today's Users
+                          </p>
+                          <h5 class="font-weight-bolder">2,300</h5>
+                          <p class="mb-0">
+                            <span class="text-success text-sm font-weight-bolder">
+                              +3%
+                            </span>
+                            since last week
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-4 text-end">
+                        <div class="icon icon-shape1 bg-gradient-warning shadow-warning text-center rounded-circle d-flex align-items-center justify-content-center">
+                          <i
+                            class="fa-solid fa-earth-americas fa-lg opacity-10"
+                            style={{ color: "#ffffff" }}
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class=" tm-block-card1">
+                  <div class="card-body p-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="numbers">
+                          <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                            New Clients
+                          </p>
+                          <h5 class="font-weight-bolder">+3,462</h5>
+                          <p class="mb-0">
+                            <span class="text-danger text-sm font-weight-bolder">
+                              -2%
+                            </span>
+                            since last quarter
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-4 text-end">
+                        <div class="icon icon-shape2 bg-gradient-warning shadow-warning text-center rounded-circle d-flex align-items-center justify-content-center">
+                          <i
+                            class="fa-solid fa-newspaper fa-lg opacity-10"
+                            style={{ color: "#ffffff" }}
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                <div class=" tm-block-card1">
+                  <div class="card-body p-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="numbers">
+                          <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                            Sales
+                          </p>
+                          <h5 class="font-weight-bolder">$103,430</h5>
+                          <p class="mb-0">
+                            <span class="text-success text-sm font-weight-bolder">
+                              +5%
+                            </span>{" "}
+                            than last month
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-4 text-end">
+                        <div class="icon icon-shape3 bg-gradient-warning shadow-warning text-center rounded-circle d-flex align-items-center justify-content-center">
+                          <i
+                            class="fa-solid fa-cart-shopping fa-lg opacity-10"
+                            style={{ color: "#ffffff" }}
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="col-lg-3 col-md-6  col-sm-12">
                 <div className="tm-block-card  py-2">
                   <div className="card-body">
@@ -382,9 +504,9 @@ export default function Requests() {
                               <td>550</td>
                               <td>28 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -398,9 +520,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -414,9 +536,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -430,9 +552,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -446,9 +568,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -462,9 +584,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -478,9 +600,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -494,9 +616,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -510,9 +632,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -526,9 +648,9 @@ export default function Requests() {
                               <td>750</td>
                               <td>21 March 2019</td>
                               <td>
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                           </tbody>
@@ -553,9 +675,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -563,9 +685,9 @@ export default function Requests() {
                                 Product Category 2
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -573,9 +695,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -583,9 +705,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -593,9 +715,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -603,9 +725,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -613,9 +735,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -623,9 +745,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -633,9 +755,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -643,9 +765,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -653,9 +775,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             <tr>
@@ -663,9 +785,9 @@ export default function Requests() {
                                 Product Category 1
                               </td>
                               <td className="text-center">
-                                <a href="#" className="tm-product-delete-link">
+                               <Link to="#" className="tm-product-delete-link">
                                   <i className="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+                               </Link>
                               </td>
                             </tr>
                             {/* Continue with other rows */}
@@ -704,7 +826,6 @@ export default function Requests() {
                                 id="name"
                                 name="name"
                                 type="text"
-                                
                                 className="form-control validate"
                                 required
                               />

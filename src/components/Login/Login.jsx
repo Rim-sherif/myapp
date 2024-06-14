@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import { CgSpinner } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
-import img from "../.././../assets/images/images/image_processing20200908-23070-1areanr 1 (1).jpg";
-import icon from "../../../assets/images/icons/egypt 1.png";
+import img from ".././../assets/images/images/image_processing20200908-23070-1areanr 1 (1).jpg";
+import icon from "../../assets/images/icons/egypt 1.png";
 import { useFormik } from "formik";
 import axios from "axios";
 // import { toast, Toaster } from "react-hot-toast";

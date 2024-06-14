@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../assets/images/images/error.svg';
+import img from '../../assets/images/images/error.svg';
 
 
 

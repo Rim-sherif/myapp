@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom';
 import  { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import OtpInput from 'react18-input-otp';
-import img from '../../../assets/images/images/image_processing20200908-23070-1areanr 1.jpg';
+import img from '../../assets/images/images/image_processing20200908-23070-1areanr 1.jpg';
 import { useFormik } from 'formik';
 import axios from "axios";
 import * as Yup from 'yup'
-import {UserContext} from '../../context/userToken'
+import {UserContext} from '../context/userToken'
 
 
 export default function Otp() {

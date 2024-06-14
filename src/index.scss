@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 :root {
-  --header-height: 3rem;
+  --header-height: 2.5rem;
   --nav-width: 75px;
   --first-color: #070F2B;
   --first-color-light: #AFA5D9;
@@ -30,7 +30,7 @@ body {
 .height-100 {
   background-color: var(--first-color);
   height: 100%;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   margin-left: -140px;
   padding: 0 1rem;
   
@@ -67,12 +67,42 @@ body {
 .header_img {
   width: 35px;
   height: 35px;
+  border-radius: 50%;
+  font-weight: 400;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
   left: 5px;
   overflow: hidden
 }
+
+.icon-shape{
+  background-color: #596CFF;
+}
+.icon-shape1{
+  background-color: #F56565;
+}
+.icon-shape2{
+  background-color: #81E6D9;
+}
+.icon-shape3{
+  background-color: #fd7e14;
+}
+
+.search-form input {
+  width: 100%;
+  height:40px;
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 10px;
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 20px;/* Rounded corners for the input */
+  font-size: 16px; /* Larger text */
+}
+
+.search-input::placeholder {
+  color: #888; /* Placeholder text color */
+  font-style: italic; /* Italic placeholder text */
+}
+
 
 .adminName {
   color: white;
@@ -318,6 +348,7 @@ body {
 .request-part .req-ico {
   font-size: 25px;
   padding-left: 15px;
+ 
 }
 
 .req-item .btn-req1 {
@@ -417,6 +448,8 @@ body {
   border-radius: 20px;
   border: 2px solid rgba(220, 220, 220, 0.86);
 }
+
+
 
 /* add store form*/
 .add-store {
@@ -1043,6 +1076,14 @@ h3>span {
   max-height: 400px;
   background-color: white;
 }
+.tm-block-card1 {
+  
+  box-shadow: 1px 1px 5px 0 #566a7c;
+  border-radius: 30px;
+  background-color: white;
+}
+
+
 
 
 .tm-block-avatar,

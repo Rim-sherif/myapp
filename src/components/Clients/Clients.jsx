@@ -1,12 +1,12 @@
-import React from "react";
-import one from "../../../../assets/images/images/1.jpg";
-import two from "../../../../assets/images/images/2.jpg";
-import three from "../../../../assets/images/images/3.jpg";
-import four from "../../../../assets/images/images/4.jpg";
-import five from "../../../../assets/images/images/5.jpg";
-import six from "../../../../assets/images/images/6.jpg";
-import seven from "../../../../assets/images/images/7.jpg";
-import eight from "../../../../assets/images/images/8.jpg";
+import React from 'react'
+import one from "../../assets/images/images/1.jpg";
+import two from "../../assets/images/images/2.jpg";
+import three from "../../assets/images/images/3.jpg";
+import four from "../../assets/images/images/4.jpg";
+import five from "../../assets/images/images/5.jpg";
+import six from "../../assets/images/images/6.jpg";
+import seven from "../../assets/images/images/7.jpg";
+import eight from "../../assets/images/images/8.jpg";
 import Modal from "react-bootstrap/Modal";
 
 function MyVerticallyCenteredModal(props) {
@@ -108,16 +108,17 @@ function MyVerticallyCenteredModal(props) {
     </Modal>
   );
 }
-export default function Engineer() {
+
+export default function Clients() {
   const [modalShow, setModalShow] = React.useState(false);
   return (
-    <>
+   <>
       <div className="store-section">
         <div className="container  p-5 ">
           <div className="main-sec">
             <div className="d-flex justify-content-between">
               <div className="d-flex">
-                <h2 className="fst">Engineer List</h2>
+                <h2 className="fst">Client List</h2>
               </div>
               
 
@@ -493,5 +494,8 @@ export default function Engineer() {
         </div>
       </div>
     </>
+
+   
   )
 }
+
